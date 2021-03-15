@@ -3,6 +3,9 @@ section {
   @include flex-row;
   justify-content: space-between;
   margin-bottom: 9rem;
+  @include tablet {
+    flex-direction: column-reverse;
+  }
 
   .left {
     @include flex-col;
@@ -10,12 +13,16 @@ section {
     z-index: 1;
     align-items: initial;
     gap: 3.4rem;
+    @include tablet {
+      width: inherit;
+      transform: translateY(-8rem);
+    }
     p {
       font-size: 1.6rem;
       line-height: 2;
     }
     h1 {
-      font-size: 5rem;
+      font-size: clamp(3rem, 10vw, 5rem);
     }
     h2 {
       font-size: 3rem;
@@ -34,9 +41,13 @@ section {
   .right {
     width: inherit;
     img {
-      width: auto;
-      height: 70vh;
+      width: 40vw;
+      min-width: 40rem;
       animation: unsettle 5s ease-in-out infinite;
+      @include tablet {
+        width: 80vw;
+        min-width: unset;
+      }
     }
   }
 }

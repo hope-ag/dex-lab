@@ -124,9 +124,9 @@ a {
 }
 
 .container {
-  width: 95%;
+  width: 90%;
   height: 100%;
-  max-width: 1280px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
   // overflow-x: hidden;
@@ -142,6 +142,9 @@ a {
   //   position: absolute;
   //   right: -5rem;
   // }
+  @include tablet-sm {
+    width: 98%;
+  }
 }
 
 button {

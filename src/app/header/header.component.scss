@@ -1,7 +1,7 @@
 @import "../../config";
 header {
   background: $clr-white;
-  margin: 1rem 0 3rem;
+  margin: 0.4rem 0 3rem;
   position: relative;
 
   @include flex-row;

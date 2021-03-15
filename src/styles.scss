@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./config";
+
+body {
+  min-height: 100vh;
+  max-width: 100vw;
+  background: linear-gradient(
+    230deg,
+    rgba($clr-primary, 0.3),
+    50%,
+    rgba(#fff, 1)
+  );
+}
+main {
+  min-height: 80vh;
+}

@@ -1,0 +1,73 @@
+@import "../../config";
+header {
+  background: $clr-white;
+  margin: 1rem 0 3rem;
+  @include flex-row;
+  justify-content: space-between;
+  border-radius: 1rem;
+  @include l-shadow;
+  height: 6.5rem;
+  padding: 0 1rem;
+}
+.logo {
+  cursor: pointer;
+  h1 {
+    font-size: 3.5rem;
+    color: $clr-primary;
+  }
+}
+nav ul {
+  @include flex-row;
+  gap: clamp(1rem, 18vw, 6rem);
+  //   & li a {
+  //     padding: 2rem 0;
+  //   }
+
+  & a {
+    padding: 2rem 0;
+    color: $clr-black;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 5px;
+    @include transition-short;
+    position: relative;
+    &::after {
+      @include transition-medium;
+      position: absolute;
+      content: "";
+      left: 0;
+      transform: scaleX(0);
+      transform-origin: center;
+      height: 0.3rem;
+      width: 100%;
+      border-radius: 1rem;
+      bottom: 0;
+      background: $clr-primary;
+    }
+    &:hover::after,
+    &.active::after {
+      transform: scaleX(1);
+    }
+    // @include tablet {
+    //   display: inline;
+    //   padding: 2.2rem 0;
+    //   border-radius: 0;
+    //   font-size: 1.4rem;
+    //   width: 100%;
+
+    //   text-align: center;
+    //   &:nth-last-of-type(1) {
+    //     margin-bottom: 1.5rem;
+    //   }
+    //   &:hover,
+    //   &:active,
+    //   &.active {
+    //     background: $clr-primary;
+    //   }
+    //   &::after {
+    //     display: none;
+    //   }
+    // }
+  }
+}

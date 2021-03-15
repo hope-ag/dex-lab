@@ -1,0 +1,49 @@
+@import "../../config";
+section {
+  @include flex-row;
+  justify-content: space-between;
+
+  .left {
+    @include flex-col;
+    width: clamp(10rem, 40vw, 60rem);
+    z-index: 1;
+    align-items: initial;
+    gap: 4rem;
+    h1 {
+      font-size: 5rem;
+    }
+    h2 {
+      font-size: 3rem;
+      span {
+        color: $clr-primary;
+        font-size: 3rem;
+      }
+    }
+    button {
+      height: 5rem;
+      width: 18rem;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+  }
+  .right {
+    width: inherit;
+    img {
+      width: auto;
+      height: 70vh;
+      animation: unsettle 5s ease-in-out infinite;
+    }
+  }
+}
+
+@keyframes unsettle {
+  0% {
+    transform: translateY(-2rem);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-2rem);
+  }
+}

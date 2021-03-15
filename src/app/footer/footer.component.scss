@@ -1,0 +1,8 @@
+@import "../../config";
+footer {
+  background: $clr-black;
+  min-height: 30vh;
+  color: $clr-white;
+  @include flex-col;
+  justify-content: center;
+}
